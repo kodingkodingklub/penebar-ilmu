@@ -18,6 +18,8 @@
     <!-- Materialize css -->
     <link rel="stylesheet" href="{{asset('materialize/css/materialize.css')}}">
     <link rel="stylesheet" href="{{asset('materialize/css/style.css')}}">
+    
+    <link rel="stylesheet" href="{{asset('materialize/iconfont/material-icons.css')}}">
 </head>
 <body>
     <nav class="white" role="navigation">
