@@ -17,5 +17,10 @@
       $('.carousel').carousel('next');
       setTimeout(autoplay, 5200);
     }
+    $('.dropdown-trigger').dropdown(
+      {
+        alignment: 'left',
+      }
+    );
   }); // end of document ready
 })(jQuery); // end of jQuery name space

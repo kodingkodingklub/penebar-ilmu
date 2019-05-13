@@ -22,16 +22,33 @@
             <div class="nav-wrapper container navbar-toggler-icon">
             <img src="{{url('img/logo-penebarilmu-sementara-baru.png')}}" width="50" height="60" alt="" srcset=""><a id="logo-container" href="/" class="brand-logo" style="font-family:Edwardian Script ITC;margin-left:10px;">Penebar Ilmu</a>
             <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a class="dropdown-trigger" data-target="dropdown2">Category<i class="material-icons right">arrow_drop_down</i></a>
+                    <ul id="dropdown2" class="dropdown-content">
+                        <li><a href="#" style="font-size:14px;"><i class="tiny material-icons">language</i>Web</a></li>
+                        <li><a href="#" style="font-size:13px;"><i class="tiny material-icons left">computer</i>Desktop</a></li>
+                        <li><a href="#" style="font-size:14px;"><i class="small material-icons left">android</i>Mobile</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">Store</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">About</a>
+                </li>
                 @if (Route::has('login'))
                 <li>
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="nav-link">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" class="nav-link">Login</a>
                 </li>
                 <li>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" class="nav-link">Register</a>
                         @endif
                     @endauth
                 </li>
@@ -39,16 +56,37 @@
             </ul>
 
             <ul id="nav-mobile" class="sidenav">
+                <li>
+                    <a href="#" class="nav-link"> <i class="material-icons">home</i> Home</a>
+                </li>
+                <li>
+                    <a class="nav-link dropdown-trigger" data-target="dropdown1"><i class="material-icons">list</i>
+                        Category <i class="material-icons right">arrow_drop_down</i></a>
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li class="dropdown-item"><a href="#" class="nav-link"><i class="material-icons">language</i>
+                                Web Programming</a></li>
+                        <li class="dropdown-item"><a href="#" class="nav-link"><i class="material-icons">computer</i>
+                                Desktop Programming</a></li>
+                        <li class="dropdown-item"><a href="#" class="nav-link"><i class="material-icons">android</i>
+                                Mobile Programming</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav-link"><i class="material-icons">store</i>Store</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link"><i class="material-icons">info</i> About</a>
+                </li>
                 @if (Route::has('login'))
                 <li>
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="nav-link"><i class="material-icons">dashboard</i> Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" class="nav-link"><i class="material-icons">input</i> Login</a>
                 </li>
                 <li>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" class="nav-link"><i class="material-icons">person_add</i> Register</a>
                         @endif
                     @endauth
                 </li>
